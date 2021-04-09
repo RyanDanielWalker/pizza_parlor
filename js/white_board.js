@@ -5,16 +5,15 @@
 function Pizza(size, basePrice) {
   this.size = size
   this.basePrice = basePrice
-  this.toppings = 0
   this.totalCost = 0
 }
-pizza.prototype.calculateTotal(); {
-  this.totalCost = this.toppings + this.basePrice
+Pizza.prototype.calculateTotal = function () {
+  this.totalCost = toppings + this.basePrice
 }
 
-pizza.prototype.calculateToppings(toppings); {
-  this.toppings = toppings
-}
+// pizza.prototype.calculateToppings(toppings); {
+//   this.toppings = toppings
+// }
 
 
 //gather sum of all inputted values from toppings selector and add to price
@@ -27,7 +26,6 @@ expected output:
 smallPizza {
   size: small
   basePrice: 10
-  toppings: 0
   totalCost: 0
 }
 
@@ -38,7 +36,6 @@ expected output:
 mediumPizza {
   size: medium
   basePrice: 15
-  toppings: 0
   totalCost: 0
 }
 
@@ -49,6 +46,10 @@ expected output:
 largePizza {
   size: large
   basePrice: 20
-  toppings: 0
   totalCost: 0
 }
+
+test: "It should add as a value the sum of toppings and basePrice to the totalCost key within pizza object"
+code:
+calculateTotal(toppings)
+expected output: totalCost: (toppings + basePrice)
