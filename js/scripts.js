@@ -23,6 +23,11 @@ Pizza.prototype.calculateToppings = function () {
 
 
 
+
+
+
+
+
 $(document).ready(function () {
   $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
