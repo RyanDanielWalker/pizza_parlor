@@ -12,9 +12,12 @@ Pizza.prototype.calculateTotal = function (toppings) {
 $(document).ready(function () {
 
 
-  $("form#sizeSelect").submit(function (event) {
+  $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
+    let toppings = parseInt($('input:checkbox:checked').val())
+    console.log(toppings)
     let size = $("#sizeChoice").val();
+    // let toppings = parseInt($(".form-check-input:checked").val())
     if (size === "1") {
       pizzaPie = new Pizza("small", 10)
     }
@@ -24,6 +27,9 @@ $(document).ready(function () {
     if (size === "3") {
       pizzaPie = new Pizza("large", 20)
     }
+
+    pizzaPie.calculateTotal(toppings)
+    console.log(pizzaPie)
 
   })
 
