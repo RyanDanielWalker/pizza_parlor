@@ -20,14 +20,6 @@ Pizza.prototype.calculateToppings = function () {
   this.toppingsTotal = toppingsTotal
 }
 
-
-
-
-
-
-
-
-
 $(document).ready(function () {
   $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
@@ -48,6 +40,14 @@ $(document).ready(function () {
     $(".secondShowing").slideDown(1000)
   })
 })
+
+
+
+
+
+
+
+
 
 
 
