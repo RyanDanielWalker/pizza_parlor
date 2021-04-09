@@ -10,11 +10,16 @@ Pizza.prototype.calculateTotal = function (toppings) {
 
 
 $(document).ready(function () {
-  $("#selectToppings").multiselect();
-  $().submit(function (event) {
-    if ()
+  $(form#selectSize).submit(function (event) {
+    event.preventDefault
+    let size = $('#sizeChoice').val()
+    if (size === "1") {
       let smallPizza = new Pizza("small", 10)
-    let mediumPizza = new Pizza("medium", 15)
-    let largePizza = new Pizza("large", 20)
+    } else if (size === "2") {
+      let mediumPizza = new Pizza("medium", 15)
+    } else if (size === "3") {
+      let largePizza = new Pizza("large", 20)
+    }
+
   })
 })
