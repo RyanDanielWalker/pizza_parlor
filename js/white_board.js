@@ -12,8 +12,8 @@ pizza.prototype.calculateTotal(); {
   this.totalCost = this.toppings + this.basePrice
 }
 
-pizza.prototype.calculateToppings(); {
-
+pizza.prototype.calculateToppings(toppings); {
+  this.toppings = toppings
 }
 
 
