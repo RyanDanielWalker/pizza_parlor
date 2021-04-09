@@ -13,54 +13,118 @@
 <body>
   <div class="containter">
 
-    <form id="selectSize">
-      <select class="form-control">
-        <option disabled selected>Choose your size</option>
-        <option value="1">Small</option>
-        <option value="2">Medium</option>
-        <option value="3">Large</option>
-      </select>
-      <button type="submit" class="btn btn-outline-primary">Submit</button>
-    </form>
+    <div id="page1">
+      <form id="selectSize">
+        <select class="form-control">
+          <option disabled selected>Choose your size</option>
+          <option value="1">Small</option>
+          <option value="2">Medium</option>
+          <option value="3">Large</option>
+        </select>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+    </div>
 
-    <form id="selectToppings">
-      <select class="form-control" multiple="multiple">
+    <div id="page2">
+      <form id="selectToppings">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Mozzarella
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Goat Cheese
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Feta Cheese
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Bleu Cheese
+          </label>
+        </div>
+        <!-- <select class="form-control" multiple="multiple">
         <option disabled selected>Choose your cheese</option>
         <option value="1">Vegan "Mozzarella"</option>
         <option value="1">Mozzarella</option>
         <option value="1">Bleu Cheese</option>
         <option value="1">Goat Cheese</option>
         <option value="1">Feta Cheese</option>
-      </select>
-      <select class="form-control" multiple>
+      </select> -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="2">
+          <label class="form-check-label">
+            Pepperoni
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="2">
+          <label class="form-check-label">
+            Sausage
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="2">
+          <label class="form-check-label">
+            Salami
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="2">
+          <label class="form-check-label">
+            Canadian Bacon
+          </label>
+        </div>
+        <!-- <select class="form-control" multiple>
         <option disabled selected>Choose your meat</option>
         <option value="2">Pepperoni</option>
         <option value="2">Sausage</option>
         <option value="2">Salami</option>
         <option value="2">Canadian Bacon</option>
-      </select>
-      <select class="form-control" multiple>
+      </select> -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Green Pepper
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Mushroom
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Onion
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="1">
+          <label class="form-check-label">
+            Olive
+          </label>
+        </div>
+
+        <!-- <select class="select" multiple>
         <option disabled selected>Choose your veggies</option>
         <option value="1">Green Pepper</option>
         <option value="1">Mushroom</option>
         <option value="1">Tomato</option>
         <option value="1">Onion</option>
         <option value="1">Olive</option>
-      </select>
-      <button type="submit" class="btn btn-outline-primary">Submit</button>
-    </form>
-
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1">
-        Green Pepper
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label>
-        Olive
-      </label>
+      </select> -->
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
     </div>
 
 
