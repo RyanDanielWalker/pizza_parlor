@@ -10,6 +10,7 @@ Pizza.prototype.calculateTotal = function (toppings) {
 
 
 $(document).ready(function () {
+  $("#selectToppings").multiselect();
   $().submit(function (event) {
     if ()
       let smallPizza = new Pizza("small", 10)
