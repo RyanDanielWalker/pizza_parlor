@@ -43,6 +43,8 @@ $(document).ready(function () {
     if (sizeChoice === "3") {
       pizzaPie = new Pizza("large", 20)
     }
+    $(".firstShowing").slideUp(850)
+    $("#secondShowing").slideUp(1000)
     pizzaPie.addToppings()
     pizzaPie.calculateTotal()
 
@@ -50,8 +52,7 @@ $(document).ready(function () {
 
 
 
-    $(".firstShowing").slideUp(850)
-    $(".secondShowing").slideDown(1000)
+
 
 
   })
