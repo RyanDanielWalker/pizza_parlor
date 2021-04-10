@@ -7,6 +7,8 @@ function Pizza(sizeChoice, basePrice) {
 }
 Pizza.prototype.calculateTotal = function () {
   this.totalCost = this.toppingsTotal + this.basePrice
+  $("#printSize").text(this.size)
+  $("#printBasePrice").text(this.basePrice + ".00")
   $("#grandTotal").text("$" + this.totalCost + ".00")
 }
 Pizza.prototype.addToppings = function () {
@@ -15,7 +17,7 @@ Pizza.prototype.addToppings = function () {
   $('input:checkbox:checked').each(function () {
     toppingArray.push(this.name)
     toppingPrice.push(parseInt($(this).val()))
-    $("#toppingsList").append("<li>" + this.name + " " + "$" + parseInt($(this).val()) + ".00" + "</li>")
+    $("#toppingsList").append("<li>" + this.name + " " + "+" + " $" + parseInt($(this).val()) + ".00" + "</li>")
   })
   let toppingsTotal = toppingPrice.reduce(function (a, b) {
     return a + b;
@@ -34,18 +36,12 @@ $(document).ready(function () {
     let sizeChoice = $("#sizeChoice").val();
     if (sizeChoice === "1") {
       pizzaPie = new Pizza("small", 10)
-      $("#printSize").text("small")
-      $("#printBasePrice").text("10.00")
     }
     if (sizeChoice === "2") {
       pizzaPie = new Pizza("medium", 15)
-      $("#printSize").text("medium")
-      $("#printBasePrice").text("15.00")
     }
     if (sizeChoice === "3") {
       pizzaPie = new Pizza("large", 20)
-      $("#printSize").text("large")
-      $("#printBasePrice").text("20.00")
     }
     pizzaPie.addToppings()
     pizzaPie.calculateTotal()
