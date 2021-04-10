@@ -27,6 +27,7 @@ Pizza.prototype.addToppings = function () {
   this.toppingsList = toppingArray
 }
 $(document).ready(function () {
+  $("#firstShowing").slideDown(1250)
   $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
     let sizeChoice = $("#sizeChoice").val();
@@ -40,10 +41,10 @@ $(document).ready(function () {
       alert("Please select a size!")
       return
     }
-    $("#firstShowing").slideUp(400)
+    $("#firstShowing").slideUp(800)
     pizzaPie.addToppings()
     pizzaPie.calculateTotal()
-    $("#secondShowing").fadeIn(1250)
+    $("#secondShowing").slideDown(2250)
   })
 })
 

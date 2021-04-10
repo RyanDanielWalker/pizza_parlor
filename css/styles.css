@@ -1,5 +1,5 @@
 #secondShowing {
-  /* display: none; */
+  display: none;
   margin: auto;
   width: 40vw;
   margin-top: 15vw;
@@ -8,7 +8,7 @@
 }
 
 #firstShowing {
-  /* display: none; */
+  display: none;
   margin: auto;
   width: 50vw;
   margin-top: 20vw;
