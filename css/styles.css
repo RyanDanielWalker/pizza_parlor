@@ -1,3 +1,27 @@
 #secondShowing {
-  display: none;
+  /* display: none; */
+  margin: auto;
+  width: 65vw;
+  margin-top: 15vw;
+  padding: 12px;
+
 }
+
+#firstShowing {
+  /* display: none; */
+  margin: auto;
+  width: 50vw;
+}
+
+#receiptHeader {
+  text-align: center;
+}
+
+ul {
+list-style-type: none;
+padding: 0;
+margin: 0 0 5px 0;
+text-align: center;
+}
+
+

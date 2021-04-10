@@ -14,7 +14,7 @@
   <div class="containter">
 
 
-    <main class="firstShowing">
+    <div id="firstShowing">
       <form id="pizzaOptions">
         <div class="card" id="page1">
           <select class="form-control" id="sizeChoice">
@@ -24,7 +24,7 @@
             <option value="3">Large</option>
           </select>
         </div>
-        <div class="card-group" id="page2">
+        <div class="card-group">
           <div class="card">
             <div class="card-body">
               <div class="form-check">
@@ -112,18 +112,20 @@
         </div>
         <button type="submit" class="btn btn-outline-primary">Submit</button>
       </form>
-    </main>
+    </div>
 
     <div class="card" id="secondShowing">
-      <h2>Order receipt for your <span id="printSize"></span> pizza!</h2>
-      <hr width="70%">
-      <h4>Base Price: $<span id="printBasePrice"></span></h4>
-      <h4>Toppings</h4>
+      <h2 id="receiptHeader">Order receipt for your <span id="printSize"></span> pizza!</h2>
+      <hr style="width: 65%; margin: auto;">
+      <h4 id="receiptHeader">Base Price: <span id="printBasePrice"></span></h4>
+      <h4 id="receiptHeader">Toppings</h4>
       <ul id="toppingsList">
       </ul>
-      <h4>Toppings total: $<span id="printToppingPrice"></span></h4>
-      <h3>Grand Total:<span id="grandTotal"></span></h3>
+      <h4 id="receiptHeader">Toppings total: $<span id="printToppingPrice"></span></h4>
+      <hr style="width: 65%; margin: auto;">
+      <h3 id="receiptHeader">Grand Total:<span id="grandTotal"></span></h3>
     </div>
+
 
 
 
