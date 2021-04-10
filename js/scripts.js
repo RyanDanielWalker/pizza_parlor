@@ -47,14 +47,3 @@ $(document).ready(function () {
     $("#secondShowing").fadeIn(2250)
   })
 })
-
-
-
-
-
-
-
-
-
-
-
