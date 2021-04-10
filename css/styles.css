@@ -1,28 +1,30 @@
+body {
+  font-family: 'Marko One', serif;
+  background-image: url('img_checkers.png');
+  background-color: red;
+}
 #secondShowing {
   display: none;
   margin: auto;
   width: 40vw;
-  margin-top: 15vw;
+  margin-top: 20vw;
   padding: 12px;
-
 }
-
 #firstShowing {
   display: none;
   margin: auto;
   width: 50vw;
   margin-top: 20vw;
+  padding: 15px;
 }
-
 #receiptHeader {
   text-align: center;
 }
-
 ul {
-list-style-type: none;
-padding: 0;
-margin: 0 0 5px 0;
-text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 5px 0;
+  text-align: center;
 }
 button {
   margin: auto;
@@ -31,6 +33,33 @@ button {
 #header {
   text-align: center;
 }
- p{
-   text-align: center;
- }
+p {
+  text-align: center;
+}
+.logo {
+  width: 100%;
+  height: auto;
+  border: solid black 2px;
+}
+#button {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: solid rgb(223, 26, 26) 2px;
+}
+.form-control:focus {
+  border-color: rgb(223, 26, 26);
+  box-shadow: 0 0 0 0.2rem rgba(197, 31, 31, 0.25);
+}
+h2 {
+  padding-top: 15px;
+  text-decoration: underline;
+}
+.card {
+  border: solid black 3px;
+  background-color: yellow;
+}
+#sizeChoice {
+  margin-bottom: 10px;
+  border: solid black 2px;
+  background-color: yellow;
+}

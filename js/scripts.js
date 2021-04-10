@@ -8,6 +8,7 @@ function Pizza(sizeChoice, basePrice) {
 Pizza.prototype.calculateTotal = function () {
   this.totalCost = this.toppingsTotal + this.basePrice
   $("#printSize").text(this.size)
+  $("#printToppingPrice").text(" " + " $" + this.toppingsTotal + ".00")
   $("#printBasePrice").text("$" + this.basePrice + ".00")
   $("#grandTotal").text("$" + this.totalCost + ".00")
 }
@@ -22,12 +23,11 @@ Pizza.prototype.addToppings = function () {
   let toppingsTotal = toppingPrice.reduce(function (a, b) {
     return a + b;
   }, 0)
-  $("#printToppingPrice").text(" " + " $" + toppingsTotal + ".00")
   this.toppingsTotal = toppingsTotal
   this.toppingsList = toppingArray
 }
 $(document).ready(function () {
-  $("#firstShowing").slideDown(1250)
+  $("#firstShowing").slideDown(850)
   $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
     let sizeChoice = $("#sizeChoice").val();
@@ -44,7 +44,7 @@ $(document).ready(function () {
     $("#firstShowing").slideUp(800)
     pizzaPie.addToppings()
     pizzaPie.calculateTotal()
-    $("#secondShowing").slideDown(2250)
+    $("#secondShowing").fadeIn(2250)
   })
 })
 

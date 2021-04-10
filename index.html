@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
 </head>
@@ -14,24 +16,24 @@
   <div class="containter">
 
 
-    <div id="firstShowing">
-      <form id="pizzaOptions">
-        <div class="card" id="page1">
 
-          <header id="header">
-            <h2>Build Your Own Pizza!</h2>
-          </header>
-          <select class="form-control" id="sizeChoice">
-            <option disabled selected>Choose your size</option>
-            <option value="1">Small</option>
-            <option value="2">Medium</option>
-            <option value="3">Large</option>
-          </select>
-        </div>
+    <div class="card" id="firstShowing">
+      <form id="pizzaOptions">
+        <header id="header">
+
+          <img src="img/pizzaparty.png" alt="Pizza Shop logo" class="logo">
+          <h2>Build Your Own Pizza!</h2>
+        </header>
+        <select class="form-control" id="sizeChoice">
+          <option disabled selected>Choose your size</option>
+          <option value="1">Small</option>
+          <option value="2">Medium</option>
+          <option value="3">Large</option>
+        </select>
         <div class="card-group">
           <div class="card">
             <div class="card-body">
-              <p><strong>Select your cheese</strong><br>(not required)</p>
+              <p><strong>Select your cheese</strong></p>
               <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
               <div class="form-check">
                 <input class="form-check-input" name="Mozzarella" type="checkbox" value="1" id="mozzarella">
@@ -62,7 +64,7 @@
           <div class="card">
             <div class="card-body">
               <div class="form-check">
-                <p><strong>Select your meat</strong><br>(not required)</p>
+                <p><strong>Select your meat</strong></p>
                 <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
                 <input class="form-check-input" name="Pepperoni" type="checkbox" value="2" id="pepperoni">
                 <label class="form-check-label" for="pepperoni">
@@ -92,7 +94,7 @@
           <div class="card">
             <div class="card-body">
               <div class="form-check">
-                <p><strong>Select your veggies</strong><br>(not required)</p>
+                <p><strong>Select your veggies</strong></p>
                 <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
                 <input class="form-check-input" name="Green Pepper" type="checkbox" value="1" id="greenPepper">
                 <label class="form-check-label" for="greenPepper">
@@ -119,12 +121,15 @@
               </div>
             </div>
           </div>
+          <button type="submit" class="btn btn-outline-danger" id="button">Submit</button>
+          <img src="img/checkers.png" alt="Checker pattern" class="logo">
         </div>
-        <button type="submit" class="btn btn-outline-primary">Submit</button>
       </form>
     </div>
 
+
     <div class="card" id="secondShowing">
+      <img src="img/pizzaparty.png" alt="Pizza Shop logo" class="logo">
       <h1 id="receiptHeader">Order receipt for your <span id="printSize"></span> pizza!</h1>
       <hr style="width: 65%; margin: auto; margin-bottom: 10px;">
       <h5 id="receiptHeader">Toppings</h5>
@@ -135,6 +140,7 @@
       <h4 id="receiptHeader">Base price: <span id="printBasePrice"></span></h4>
       <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
       <h3 id="receiptHeader">Grand Total:<span id="grandTotal"></span></h3>
+      <img src="img/bye.png" alt="Checker pattern" class="logo">
     </div>
 
 
