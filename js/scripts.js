@@ -17,38 +17,42 @@ Pizza.prototype.addToppings = function () {
   $('input:checkbox:checked').each(function () {
     toppingArray.push(this.name)
     toppingPrice.push(parseInt($(this).val()))
-    $("#toppingsList").append("<li>" + this.name + " " + "+" + " $" + parseInt($(this).val()) + ".00" + "</li>")
+    $("#toppingsList").append("<li>" + this.name + " " + " +" + " $" + parseInt($(this).val()) + ".00" + "</li>")
   })
   let toppingsTotal = toppingPrice.reduce(function (a, b) {
     return a + b;
   }, 0)
-  $("#printToppingPrice").text(toppingsTotal + ".00")
+  $("#printToppingPrice").text(" " + " $" + toppingsTotal + ".00")
   this.toppingsTotal = toppingsTotal
   this.toppingsList = toppingArray
 }
-
-
-
-
 $(document).ready(function () {
   $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
+    let pizzaPie;
     let sizeChoice = $("#sizeChoice").val();
     if (sizeChoice === "1") {
       pizzaPie = new Pizza("small", 10)
-    }
-    if (sizeChoice === "2") {
+    } else if (sizeChoice === "2") {
       pizzaPie = new Pizza("medium", 15)
-    }
-    if (sizeChoice === "3") {
+    } else if (sizeChoice === "3") {
       pizzaPie = new Pizza("large", 20)
+    } else {
+      alert("Please select a size!")
+      return
     }
-    $("#firstShowing").slideUp(950)
+    $("#firstShowing").slideUp(400)
     pizzaPie.addToppings()
     pizzaPie.calculateTotal()
-    $("#secondShowing").fadeIn(3250)
+    $("#secondShowing").fadeIn(1250)
   })
 })
+
+
+
+
+
+
 
 
 

@@ -17,6 +17,10 @@
     <div id="firstShowing">
       <form id="pizzaOptions">
         <div class="card" id="page1">
+
+          <header id="header">
+            <h2>Build Your Own Pizza!</h2>
+          </header>
           <select class="form-control" id="sizeChoice">
             <option disabled selected>Choose your size</option>
             <option value="1">Small</option>
@@ -115,14 +119,15 @@
     </div>
 
     <div class="card" id="secondShowing">
-      <h2 id="receiptHeader">Order receipt for your <span id="printSize"></span> pizza!</h2>
-      <hr style="width: 65%; margin: auto;">
-      <h4 id="receiptHeader">Base Price: <span id="printBasePrice"></span></h4>
-      <h4 id="receiptHeader">Toppings</h4>
+      <h1 id="receiptHeader">Order receipt for your <span id="printSize"></span> pizza!</h1>
+      <hr style="width: 65%; margin: auto; margin-bottom: 10px;">
+      <h5 id="receiptHeader">Toppings</h5>
+      <hr style="width:25%; margin:auto">
       <ul id="toppingsList">
       </ul>
-      <h4 id="receiptHeader">Toppings total: $<span id="printToppingPrice"></span></h4>
-      <hr style="width: 65%; margin: auto;">
+      <h4 id="receiptHeader">Toppings total:<span id="printToppingPrice"></span></h4>
+      <h4 id="receiptHeader">Base price: <span id="printBasePrice"></span></h4>
+      <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
       <h3 id="receiptHeader">Grand Total:<span id="grandTotal"></span></h3>
     </div>
 

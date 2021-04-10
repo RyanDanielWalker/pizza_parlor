@@ -1,7 +1,7 @@
 #secondShowing {
   /* display: none; */
   margin: auto;
-  width: 65vw;
+  width: 40vw;
   margin-top: 15vw;
   padding: 12px;
 
@@ -23,5 +23,11 @@ padding: 0;
 margin: 0 0 5px 0;
 text-align: center;
 }
-
+button {
+  margin: auto;
+  width: 50vw;
+}
+#header {
+  text-align: center;
+}
 
