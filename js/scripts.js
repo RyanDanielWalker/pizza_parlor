@@ -29,7 +29,6 @@ Pizza.prototype.addToppings = function () {
 $(document).ready(function () {
   $("form#pizzaOptions").submit(function (event) {
     event.preventDefault();
-    let pizzaPie;
     let sizeChoice = $("#sizeChoice").val();
     if (sizeChoice === "1") {
       pizzaPie = new Pizza("small", 10)

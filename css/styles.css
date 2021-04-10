@@ -11,6 +11,7 @@
   /* display: none; */
   margin: auto;
   width: 50vw;
+  margin-top: 20vw;
 }
 
 #receiptHeader {
@@ -30,4 +31,6 @@ button {
 #header {
   text-align: center;
 }
-
+ p{
+   text-align: center;
+ }
