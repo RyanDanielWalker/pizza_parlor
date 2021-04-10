@@ -10,24 +10,26 @@ function Pizza(size, basePrice) {
 Pizza.prototype.calculateTotal = function () {
   this.totalCost = this.toppingsTotal + this.basePrice
 }
-Pizza.prototype.calculateToppings = function () {
-  toppings = []
+// Pizza.prototype.calculateToppings = function () {//DO NOT REPEAT YOURSELF
+//   toppings = []
+//   $('input:checkbox:checked').each(function () {
+//     toppings.push(parseInt($(this).val()))
+//   })
+// }
+Pizza.prototype.addToppings = function () {
+  let toppingArray = []
+  let toppingPrice = []
   $('input:checkbox:checked').each(function () {
-    toppings.push(parseInt($(this).val()))
+    toppingArray.push(this.name)
+    toppingPrice.push(parseInt($(this).val()))
   })
-  let toppingsTotal = toppings.reduce(function (a, b) {
+  let toppingsTotal = toppingPrice.reduce(function (a, b) {
     return a + b;
   }, 0)
   this.toppingsTotal = toppingsTotal
-}
-Pizza.prototype.addToppings = function () {
-  let toppingArray = []
-  $('input:checkbox:checked').each(function () {
-    array.push(this.name)
-  })
   this.toppingsList = toppingArray
-
 }
+
 
 
 
@@ -46,40 +48,10 @@ $(document).ready(function () {
       pizzaPie = new Pizza("large", 20)
     }
     pizzaPie.addToppings()
-    pizzaPie.calculateToppings();
+    // pizzaPie.calculateToppings();
     pizzaPie.calculateTotal()
     console.log(pizzaPie)
     $(".firstShowing").slideUp(850)
     $(".secondShowing").slideDown(1000)
   })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
