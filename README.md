@@ -69,63 +69,63 @@ Code:\
 `let toppingArray = [ ]`\
 `$('input:checkbox:checked').each(function () {`\
    ` toppingArray.push(this.name)`\
-Expected output: toppingArray = ["checked boxes names"]\
+Expected output: toppingArray = ["checked boxes names"]
 
 Test: "For each checked checkbox option, it should push the value of the checkbox to an empty array."\
 Code:\
 `let toppingPrice = [ ]`\
 `$('input:checkbox:checked').each(function () {`\
     `toppingPrice.push(this.name)`\
-Expected output: toppingPrice = ["checked boxes values"]\
+Expected output: toppingPrice = ["checked boxes values"]
 
 Test: "For each checked checkbox option, it should append the name and value of the checkbox to an unordered list within the HTML."\
 Code:\
 `$('input:checkbox:checked').each(function () {`\
  `$("#toppingsList").append("<li>" + this.name + " " + " +" + " $" + parseInt($(this).val()) + ".00" + "</li>")`\
-Expected output: un-ordered list of topping name with value attached in HTML\
+Expected output: un-ordered list of topping name with value attached in HTML
 
 Test: "It should add the individual values of selected toppings from new array and return the sum as a new variable "toppingsTotal."\
 Code:\
  `let toppingsTotal = toppingPrice.reduce(function (a, b) {`\
     `return a + b;`\
   `}, 0)`\
-Expected output: toppingsTotal = sum of elements from toppingPrice array\
+Expected output: toppingsTotal = sum of elements from toppingPrice array
 
 Test: "It should assign a value for toppingsTotal to any Pizza object the method is applied to"\
 Code:\
 `this.toppingsTotal = toppingsTotal`\
-Expected output: Pizza object toppingsTotal = toppingsTotal\
+Expected output: Pizza object toppingsTotal = toppingsTotal
 
 Test: "It should assign a value for toppingsList to any Pizza object the method is applied to"\
 Code:\
 `this.toppingsList = toppingArray`\
-Expected output: Pizza object toppingsList = toppingArray\
+Expected output: Pizza object toppingsList = toppingArray
 
 ### Describe Pizza.prototype.calculateTotal()
 Test: "It should reassign totalCost value to the sum of toppingsTotal value and basePrice value for any Pizza object the method is applied to."\
 Code:\
 `this.totalCost = this.toppingsTotal + this.basePrice`\
-Expected output: totalCost = sum of toppingsTotal and basePrice\
+Expected output: totalCost = sum of toppingsTotal and basePrice
 
 Test: "It should text the object's size value to HTML"\
 Code:\
 `$("#printSize").text(this.size)`\
-Expected output: Object size printed to HTML\
+Expected output: Object size printed to HTML
 
 Test: "It should text the object's toppingsTotal value to HTML"\
 Code:\
 `$("#printToppingPrice").text(" " + " $" + this.toppingsTotal + ".00")`\
-Expected output: Object toppingsTotal printed to HTML\
+Expected output: Object toppingsTotal printed to HTML
 
 Test: "It should text the object's basePrice value to HTML"\
 Code: \
 `$("#printBasePrice").text("$" + this.basePrice + ".00")`\
-Expected output: Object basePrice printed to HTML\
+Expected output: Object basePrice printed to HTML
 
 Test: "It should text the object's totalCost value to HTML"\
 Code:\
 `$("#grandTotal").text("$" + this.totalCost + ".00")`\
-Expected output: Object totalCost printed to HTML\
+Expected output: Object totalCost printed to HTML
 
 
 
