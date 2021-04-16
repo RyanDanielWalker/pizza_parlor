@@ -1,7 +1,7 @@
-function Pizza(sizeChoice) {
+function Pizza(sizeChoice, toppingsList) {
   this.size = sizeChoice
   this.basePrice = 0
-  this.toppingsList = []
+  this.toppingsList = toppingsList
   this.toppingsTotal = 0
   this.totalCost = 0
 }
@@ -15,12 +15,11 @@ Pizza.prototype.calculateTotal = function () {
   }
   this.totalCost = this.toppingsTotal + this.basePrice
 }
-Pizza.prototype.addToppings = function (toppingPrice, toppingArray) {
+Pizza.prototype.addToppings = function (toppingPrice) {
   let toppingsTotal = toppingPrice.reduce(function (a, b) {
     return a + b;
   }, 0)
   this.toppingsTotal = toppingsTotal
-  this.toppingsList = toppingArray
 }
 $(document).ready(function () {
   $("#firstShowing").slideDown(850)
@@ -28,15 +27,15 @@ $(document).ready(function () {
     event.preventDefault();
     let sizeChoice = $("#sizeChoice").val();
     if (sizeChoice) {
-      let pizzaPie = new Pizza(sizeChoice)
-      let toppingArray = []
+      let toppingsList = []
       let toppingPrice = []
       $('input:checkbox:checked').each(function () {
-        toppingArray.push(this.name)
+        toppingsList.push(this.name)
         toppingPrice.push(parseInt($(this).val()))
         $("#toppingsList").append("<li>" + this.name + " " + " +" + " $" + parseInt($(this).val()) + ".00" + "</li>")
       })
-      pizzaPie.addToppings(toppingPrice, toppingArray)
+      let pizzaPie = new Pizza(sizeChoice, toppingsList)
+      pizzaPie.addToppings(toppingPrice)
       pizzaPie.calculateTotal()
       $("#printSize").text(pizzaPie.size)
       $("#printToppingPrice").text(" " + " $" + pizzaPie.toppingsTotal + ".00")
@@ -47,5 +46,8 @@ $(document).ready(function () {
     } else {
       alert("Please select a size!")
     }
+  })
+  $("#returnButton").click(function () {
+    location.reload()
   })
 })

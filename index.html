@@ -117,24 +117,27 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-outline-danger" id="button">Submit</button>
+          <button type="submit" class="btn btn-outline-danger" id="submitButton">Submit</button>
           <img src="img/checkers.png" alt="Checker pattern" class="logo">
         </div>
       </form>
     </div>
-    <div class="card" id="secondShowing">
-      <img src="img/pizzaparty.png" alt="Pizza Shop logo" class="logo">
-      <h1 id="receiptHeader">Order receipt for your <span id="printSize"></span> pizza!</h1>
-      <hr style="width: 65%; margin: auto; margin-bottom: 10px;">
-      <h5 id="receiptHeader">Toppings</h5>
-      <hr style="width:25%; margin:auto">
-      <ul id="toppingsList">
-      </ul>
-      <h4 id="receiptHeader">Toppings total:<span id="printToppingPrice"></span></h4>
-      <h4 id="receiptHeader">Base price: <span id="printBasePrice"></span></h4>
-      <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
-      <h3 id="receiptHeader">Grand Total:<span id="grandTotal"></span></h3>
-      <img src="img/bye.png" alt="Checker pattern" class="logo">
+    <div id="secondShowing">
+      <div class="card" id="secondCard">
+        <img src="img/pizzaparty.png" alt="Pizza Shop logo" class="logo">
+        <h1 id="receiptHeader">Order receipt for your <span id="printSize"></span> pizza!</h1>
+        <hr style="width: 65%; margin: auto; margin-bottom: 10px;">
+        <h5 id="receiptHeader">Toppings</h5>
+        <hr style="width:25%; margin:auto">
+        <ul id="toppingsList">
+        </ul>
+        <h4 id="receiptHeader">Toppings total:<span id="printToppingPrice"></span></h4>
+        <h4 id="receiptHeader">Base price: <span id="printBasePrice"></span></h4>
+        <hr style="width: 65%; margin: auto; margin-bottom: 12px;">
+        <h3 id="receiptHeader">Grand Total:<span id="grandTotal"></span></h3>
+        <img src="img/bye.png" alt="Checker pattern" class="logo">
+      </div>
+      <button type="click" class="btn btn-outline-warning" id="returnButton">Make another pizza here!</button>
     </div>
   </div>
 </body>
