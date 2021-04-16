@@ -62,7 +62,7 @@ largePizza {\
   this.toppingsList = [ ]\
   this.toppingsTotal = 0\
   this.totalCost = 0\
-}\
+}
 ### Describe Pizza.prototype.addToppings()
 Test: "For each checked checkbox option, it should push the name of the checkbox to an empty array."\
 Code:\
